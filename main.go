@@ -3,19 +3,22 @@ package main
 import "fmt"
 
 func main() {
-	text1 := "Get ready"
 	score := 0
-	text2 := "Game Over"
-	fmt.Println(text1)
+	fmt.Println("Начало")
 	fmt.Println("Ваш счёт:", score)
-	fmt.Println("Вы пролете через первую трубу")
+
 	plusOne(&score)
+	fmt.Printf("Вы пролетели через %d трубу\n", score)
 	fmt.Println("Ваш счёт:", score)
-	fmt.Println("Вы пролете через вторую трубу")
 	plusOne(&score)
+	fmt.Printf("Вы пролетели через %d трубу\n", score)
 	fmt.Println("Ваш счёт:", score)
+	plusOne(&score)
+	fmt.Printf("Вы пролетели через %d трубу\n", score)
+	fmt.Println("Ваш счёт:", score)
+
 	fmt.Println("Вы разбились в тотал")
-	fmt.Println(text2)
+	fmt.Println("Фатал ерор")
 }
 func plusOne(score *int) {
 	*score += 1
