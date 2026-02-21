@@ -1,25 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	score := 0
-	fmt.Println("Начало")
-	fmt.Println("Ваш счёт:", score)
+	score := 5
+	if score > 10 {
+		p("Ты красавчик")
+	} else {
+		p("Ты лошок")
+	}
 
-	plusOne(&score)
-	fmt.Printf("Вы пролетели через %d трубу\n", score)
-	fmt.Println("Ваш счёт:", score)
-	plusOne(&score)
-	fmt.Printf("Вы пролетели через %d трубу\n", score)
-	fmt.Println("Ваш счёт:", score)
-	plusOne(&score)
-	fmt.Printf("Вы пролетели через %d трубу\n", score)
-	fmt.Println("Ваш счёт:", score)
-
-	fmt.Println("Вы разбились в тотал")
-	fmt.Println("Фатал ерор")
+	//if err := ch.Qos(1, 0, false); err != nil {
+	//	log.Fatal("Qos:", err)
+	//}
 }
-func plusOne(score *int) {
-	*score += 1
+
+func p(text string) {
+	fmt.Println(text)
 }
